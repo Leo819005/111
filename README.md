@@ -1,21 +1,25 @@
-using std::cout;
-using std::endl;
-using std::string;
-
-string toBinary(int n) {
-  string r;
-  while (n != 0) {
-    r += (n % 2 == 0 ? "0" : "1");
-    n /= 2;
-  }
-  return r;
-}
-
-int main() {
-  int number = 15;
-
-  cout << "decimal: " << number << endl;
-  cout << "binary : " << toBinary(number) << endl;
-
-  return EXIT_SUCCESS;
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int input; //
+	int a,b; //
+	int sum = 0;//
+	scanf_s("%d", &input); //
+	a = input; //
+	int i, j = 0; //
+	while (a > 0) //
+	{
+			b = a%2; //
+			a = a / 2; //
+			for (i = 1; j >= i; i++)  //
+			{
+				b = b * 10;
+			}
+		
+			sum = sum + b; // 
+			j++; //
+	}
+	printf("%d",sum); //
+	system("PAUSE");
 }
